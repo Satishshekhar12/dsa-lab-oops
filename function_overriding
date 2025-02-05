@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+
+class volume{
+
+    
+    public:
+    float cuboid(float l, float b, float h){
+      
+        cout<< l*b*h<< endl;
+        return l*b*h;
+    }
+    
+    float cube(float l){
+        cout<< l*l*l<< endl;
+        return l*l*l;
+    }
+    
+    float cylinder(float h, float r){
+        cout<< 3.14 * r* r* h<< endl;
+        return 3.14 * r* r* h;
+    }
+}vt;
+
+int main(){
+    vt.cuboid(3,6,7.8);
+    return 0;
+}
