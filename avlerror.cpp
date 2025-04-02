@@ -36,8 +36,8 @@ Node * left_rotation(Node * root){
     child->left= root;
     root->right = child_left;
      //now height calculation first roots than child
-    root->height= 1+max(get_height(root->left),get_height(root->right));
-    child->height= 1+max(get_height(child->left),get_height(child->right));
+    root->height= 1+(get_height(root->left),get_height(root->right));
+    child->height= 1+(get_height(child->left),get_height(child->right));
     
     return child;
 }
@@ -50,8 +50,8 @@ Node * right_rotation(Node *root){
     root->left = child;
     
     //now height calculation first roots than child
-    root->height= 1+max(get_height(root->left),get_height(root->right));
-    child->height= 1+max(get_height(child->left),get_height(child->right));
+    root->height= 1+(get_height(root->left),get_height(root->right));
+    child->height= 1+(get_height(child->left),get_height(child->right));
     
     return child;
 }
@@ -103,9 +103,9 @@ Node * insert(Node *root ,int val){
         return left_rotation(root);
     }
     //not required to balance
-    
+    else {
         return root;
-    
+    }
 }
 
 void inorder (Node *root){
